@@ -5,12 +5,9 @@
   background-attachment: fixed;
   background-color: var(--main-background-color, #000028);
   margin: 0 auto;
- 
 }
 
 .header {
-  width: 100%;
-
   display: grid;
   align-items: center;
   position: relative;
@@ -44,7 +41,7 @@
   font-family: var(--main-font, "IBM Plex mono", "Arial", sans-serif);
   font-size: 18px;
   font-weight: 400;
-  line-height: 1.56;
+  line-height: 25px;
   color: var(--accent-color, #ff0070);
   position: absolute;
 }
@@ -75,7 +72,7 @@
   font-size: 18px;
   font-family: var(--main-font, "IBM Plex mono", "Arial", sans-serif);
   font-weight: 400;
-  line-height: 1.125;
+  line-height: 18px;
   text-align: center;
   color: var(--button-color, #ff0070);
   border: none;
@@ -110,7 +107,7 @@
   color: var(--text-title-color, #db00ff);
 }
 
-.header__title-text {
+.header__title {
   text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
 }
 
@@ -123,7 +120,7 @@
   font-family: var(--main-font, "IBM Plex mono", "Arial", sans-serif);
   font-size: 18px;
   font-weight: 700;
-  line-height: 1.44;
+  line-height: 23.4px;
   text-align: left;
   color: var(--main-background-color, #000028);
   background: var(--text-subtitle-color, #ff0070);
@@ -133,7 +130,7 @@
   font-family: var(--main-font, "IBM Plex mono", "Arial", sans-serif);
   font-size: 18px;
   font-weight: 700;
-  line-height: 1.44;
+  line-height: 23.4px;
   text-align: left;
   color: var(--subtitle-color, #ff0070);
 }
@@ -142,14 +139,14 @@
   font-family: var(--main-font, "IBM Plex mono", "Arial", sans-serif);
   font-size: 18px;
   font-weight: 400;
-  line-height: 1.44;
+  line-height: 23.4px;
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--link-color, #ff0070);
   color: var(--main-text-color, #f1b2ce);
 }
 
 .content__link:hover {
-  border-bottom-style: solid;
+  border-bottom: 1px solid rgba(241, 178, 206, 1);
   display: inline-block;
 }
 
@@ -162,7 +159,7 @@
   font-family: var(--main-font, "IBM Plex mono", "Arial", sans-serif);
   font-size: 18px;
   font-weight: 700;
-  line-height: 1.44;
+  line-height: 23.4px;
   text-align: left;
   color: var(--text-section-color, #000028);
   background: var(--text-subtitle-color, #ff0070);
@@ -173,7 +170,7 @@
   font-family: var(--main-font, "IBM Plex mono", "Arial", sans-serif);
   font-size: 18px;
   font-weight: 400;
-  line-height: 1.44;
+  line-height: 23.4px;
   text-align: left;
   color: var(--text-section-color, #000028);
   background: var(--text-subtitle-color, #ff0070);
@@ -185,7 +182,7 @@
   font-family: var(--main-font, "IBM Plex mono", "Arial", sans-serif);
   font-size: 18px;
   font-weight: 400;
-  line-height: 1.44;
+  line-height: 23.4px;
   text-align: left;
   color: var(--main-text-color, #f1b2ce);
   margin-bottom: 20px;
@@ -193,17 +190,17 @@
 
 .footer {
   display: grid;
-  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .footer__title {
-  text-shadow: 2px 2px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
   text-align: center;
 }
 
-
 /* Стили для разрешения экрана 1024*768 */
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
   .page {
     max-width: 1024px;
   }
@@ -222,7 +219,7 @@
     top: 28px;
   }
 
-  /*.decorated-zone::after {
+  .decorated-zone::after {
     right: 20px;
     top: 20px;
   }
@@ -230,18 +227,18 @@
   .decorated-zone::before {
     left: 20px;
     bottom: 20px;
-  }*/
+  }
 
   .header__theme-menu {
-    padding: 19px 397px 0 397px;
+    padding: 19px 0 0 397px;
   }
 
   .header__theme-menu-list {
     display: flex;
   }
 
-  .header__title-text {
-    line-height: 8.125;
+  .header__title {
+    line-height: 129.53px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     padding-top: 275px;
   }
@@ -340,9 +337,8 @@
   }
 
   .footer__title {
-    line-height: 8.125;
+    line-height: 129.53px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    /*padding: 300px 257px;*/
   }
 
   .decorated-zone::before {
@@ -355,7 +351,7 @@
 }
 
 /* Стили для разрешения экрана 768*1024 */
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .page {
     max-width: 768px;
   }
@@ -385,7 +381,7 @@
   }
 
   .header__theme-menu {
-    padding: 190px 19px 0 678px;
+    padding: 190px 0 0 678px;
   }
 
   .header__theme-menu-list {
@@ -393,7 +389,7 @@
     flex-direction: column;
   }
 
-  .header__title-text {
+  .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     padding-top: 161px;
   }
@@ -486,11 +482,10 @@
     grid-template-columns: 728px;
     grid-template-rows: 984px;
     margin-top: 60px;
-    margin-right: 40px;
   }
 
   .footer__title {
-    line-height: 6.19;
+    line-height: 129.53px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     padding: 444px 204px;
   }
@@ -505,7 +500,7 @@
 }
 
 /* Стили для разрешения экрана 375*668 */
-@media (max-width: 375px) {
+@media (max-width: 767px) {
   .page {
     max-width: 375px;
   }
@@ -533,9 +528,10 @@
     left: 10px;
     bottom: 10px;
   }
-
-  .header__theme-menu {
-    padding: 74px 0 0 295px;
+   .header__theme-menu {
+    place-self: flex-end;
+    padding-top: 73px;
+    padding-right: 10px;
   }
 
   .header__theme-menu-list {
@@ -546,10 +542,7 @@
   .header__title {
     top: 238px;
     bottom: 238px;
-  }
-
-  .header__title-text {
-    line-height: 6;
+    line-height: 95.7px;
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     padding-top: 67px;
     padding-left: 10px;
@@ -653,11 +646,10 @@
     grid-template-columns: 355px;
     grid-template-rows: 647px;
     margin-top: 29px;
-    margin-right: 20px;
   }
 
   .footer__title {
-    line-height: 6;
+    line-height: 95.7px;
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     padding: 277px 13px;
   }
@@ -666,7 +658,7 @@
     left: 10px;
   }
 
-  .decorated-zone::after::after {
+  .decorated-zone::after {
     right: 10px;
   }
 }
