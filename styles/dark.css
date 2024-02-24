@@ -1,28 +1,16 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 .page.theme_dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
-  --main-font: "IBM Plex Mono";
-  --accent-font: "IBM Plex Mono";
-  --accent-color: #ff0070;
-  --main-background-color: #000028;
+  --main-text-color: #f1b2ce;
+  --background-image: url(../images/cover-image-dark.png);
   --text-title-color: #db00ff;
+  --main-background-color: #000028;
   --text-subtitle-color: #ff0070;
   --text-section-color: #000028;
-  --main-text-color: #f1b2ce;
   --subtitle-color:#ff0070;
   --button-color:#ff0070;
   --link-color: #ff0070;
   --border-color: #ff0070;
 
-.page {
+
   background-image: url(../images/cover-image-dark.png);
   background-color: var(--main-background-color, #000028);
 }
@@ -32,11 +20,15 @@
 }
 
 .theme_dark .header__theme-menu-button:hover {
-  border: 1px solid #32312D66;
+  border: 1px solid rgba(50, 49, 45, 0.4);
 }
 
 .theme_dark .header__theme-menu-button:focus-visible {
   outline: none;
-  border-bottom: 1px solid var(--border-color, #353430);
+  border-bottom: 1px solid rgba(53, 52, 48, 1);
 }
+
+.theme_dark .content__link:focus-visible {
+  border: 1px solid rgba(241, 178, 206, 1);
+  outline: none;
 }
