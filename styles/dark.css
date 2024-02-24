@@ -5,11 +5,10 @@
   --main-background-color: #000028;
   --text-subtitle-color: #ff0070;
   --text-section-color: #000028;
-  --subtitle-color:#ff0070;
-  --button-color:#ff0070;
+  --subtitle-color: #ff0070;
+  --button-color: #ff0070;
   --link-color: #ff0070;
   --border-color: #ff0070;
-
 
   background-image: url(../images/cover-image-dark.png);
   background-color: var(--main-background-color, #000028);

@@ -45,3 +45,13 @@
 .theme_light .content__link:hover {
   border-bottom: 1px solid rgba(53, 52, 48, 1);
 }
+
+.theme_light .decorated-zone::after {
+  border-top: 1px solid rgba(53, 52, 48, 1);
+  border-right: 1px solid rgba(53, 52, 48, 1);
+}
+
+.theme_light .decorated-zone::before {
+  border-bottom: 1px solid rgba(53, 52, 48, 1);
+  border-left: 1px solid rgba(53, 52, 48, 1);
+}
