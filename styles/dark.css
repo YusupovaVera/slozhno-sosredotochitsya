@@ -9,6 +9,12 @@
   --button-color: #ff0070;
   --link-color: #ff0070;
   --border-color: #ff0070;
+  --border-color-button-focus: rgba(53, 52, 48, 1);
+  --border-color-button-hover: rgba(50, 49, 45, 0.4);
+  --border-color-link-focus: rgba(241, 178, 206, 1);
+  --border-color-link-hover: rgba(241, 178, 206, 1);
+  --border-color-decorated-zone-after: #ff0070;
+  --border-color-decorated-zone-before: #ff0070;
 
   background-image: url(../images/cover-image-dark.png);
   background-color: var(--main-background-color, #000028);
@@ -19,15 +25,10 @@
 }
 
 .theme_dark .header__theme-menu-button:hover {
-  border: 1px solid rgba(50, 49, 45, 0.4);
+  border: 1px solid var(--border-color-button-hover, rgba(50, 49, 45, 0.4));
 }
 
 .theme_dark .header__theme-menu-button:focus-visible {
   outline: none;
-  border-bottom: 1px solid rgba(53, 52, 48, 1);
-}
-
-.theme_dark .content__link:focus-visible {
-  border: 1px solid rgba(241, 178, 206, 1);
-  outline: none;
+  border-bottom: 1px solid var(--border-color-button-focus, rgba(53, 52, 48, 1));
 }
