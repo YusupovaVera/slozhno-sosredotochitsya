@@ -3,6 +3,7 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-image: var(--background-image);
   background-color: var(--main-background-color, #000028);
   margin: 0 auto;
 }
@@ -22,6 +23,8 @@
   border-right: 1px solid var(--border-color-decorated-zone-after, #ff0070);
   position: absolute;
   place-self: flex-start;
+  right: 20px;
+  top: 20px;
 }
 
 .decorated-zone::before {
@@ -33,17 +36,22 @@
   border-left: 1px solid var(--border-color-decorated-zone-before, #ff0070);
   position: absolute;
   place-self: flex-end;
+  left: 20px;
+  bottom: 20px;
 }
 
 .header__decor-rec::before {
   content: "rec";
   text-transform: uppercase;
-  font-family: var(--main-font, "IBM Plex mono", "Arial", sans-serif);
+  font-family: var(--main-font, "Courier New", monospace);
   font-size: 18px;
   font-weight: 400;
   line-height: 25px;
   color: var(--accent-color, #ff0070);
   position: absolute;
+  visibility: var(--visibility-rec);
+  right: 49px;
+  top: 20px;
 }
 
 .header__decor-rec::after {
@@ -54,6 +62,9 @@
   border-radius: 50%;
   background-color: var(--accent-color, #ff0070);
   position: absolute;
+  visibility: var(--visibility-rec);
+  right: 30px;
+  top: 28px;
 }
 
 .header__theme-menu-list {
@@ -70,7 +81,7 @@
   border-width: 1px;
   border-style: solid;
   font-size: 18px;
-  font-family: var(--main-font, "IBM Plex mono", "Arial", sans-serif);
+  font-family: var(--main-font, "Courier New", monospace);
   font-weight: 400;
   line-height: 18px;
   text-align: center;
@@ -88,6 +99,7 @@
 
 .header__theme-menu-button:hover {
   border: 1px solid var(--border-color-button-hover, rgba(50, 49, 45, 0.4));
+  color: var(--button-color-hover, #353430);
 }
 
 .header__theme-menu-button:focus {
@@ -98,26 +110,29 @@
 .header__theme-menu-button:focus-visible {
   border-bottom: 1px solid var(--border-color-button-focus, rgba(53, 52, 48, 1));
   outline-offset: 1px;
+  color: var(--button-color-focus, #353430);
 }
 
 .title__text-shadow {
   font-weight: 700;
   max-width: 100%;
-  font-family: var(--main-font, "IBM Plex mono", "Arial", sans-serif);
+  font-family: var(--main-font, "Courier New", monospace);
   color: var(--text-title-color, #db00ff);
 }
 
 .header__title {
   text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
 }
 
 .header__subtitle {
   place-self: end;
+  padding-right: 20px;
 }
 
 .text-decor {
   width: 100%;
-  font-family: var(--main-font, "IBM Plex mono", "Arial", sans-serif);
+  font-family: var(--main-font, "Courier New", monospace);
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
@@ -127,7 +142,7 @@
 }
 
 .content__title {
-  font-family: var(--main-font, "IBM Plex mono", "Arial", sans-serif);
+  font-family: var(--main-font, "Courier New", monospace);
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
@@ -142,6 +157,8 @@
 .content__text-block-why {
   display: grid;
   justify-content: center;
+  gap: 20px;
+  padding-top: 60px;
 }
 
 .content__text-block-what-grid {
@@ -153,10 +170,12 @@
 .content__text-block-how {
   display: grid;
   justify-content: center;
+  gap: 20px;
 }
 
 .content__image-grid {
   display: grid;
+  gap: 20px;
 }
 
 .content__images {
@@ -166,7 +185,7 @@
 }
 
 .content__link {
-  font-family: var(--main-font, "IBM Plex mono", "Arial", sans-serif);
+  font-family: var(--main-font, "Courier New", monospace);
   font-size: 18px;
   font-weight: 400;
   line-height: 23.4px;
@@ -187,7 +206,7 @@
 }
 
 .content__subtitle-bold {
-  font-family: var(--main-font, "IBM Plex mono", "Arial", sans-serif);
+  font-family: var(--main-font, "Courier New", monospace);
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
@@ -198,7 +217,7 @@
 }
 
 .content__subtitle-normal {
-  font-family: var(--main-font, "IBM Plex mono", "Arial", sans-serif);
+  font-family: var(--main-font, "Courier New", monospace);
   font-size: 18px;
   font-weight: 400;
   line-height: 23.4px;
@@ -210,7 +229,7 @@
 }
 
 .content__paragraph {
-  font-family: var(--main-font, "IBM Plex mono", "Arial", sans-serif);
+  font-family: var(--main-font, "Courier New", monospace);
   font-size: 18px;
   font-weight: 400;
   line-height: 23.4px;
@@ -223,11 +242,15 @@
   display: grid;
   align-items: center;
   position: relative;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 .footer__title {
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
   text-align: center;
+  padding-left: 40px;
 }
 
 /* Стили для разрешения экрана 1024*768 */
@@ -240,26 +263,6 @@
     padding-bottom: 135px;
   }
 
-  .header__decor-rec::before {
-    right: 49px;
-    top: 20px;
-  }
-
-  .header__decor-rec::after {
-    right: 30px;
-    top: 28px;
-  }
-
-  .decorated-zone::after {
-    right: 20px;
-    top: 20px;
-  }
-
-  .decorated-zone::before {
-    left: 20px;
-    bottom: 20px;
-  }
-
   .header__theme-menu {
     padding: 19px 0 0 397px;
   }
@@ -270,17 +273,11 @@
 
   .header__title {
     line-height: 129.53px;
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     padding-top: 275px;
   }
 
   .header__subtitle {
     padding-top: 114px;
-    padding-right: 20px;
-  }
-
-  .content__subtitle-bold {
-    margin: 0 0 10px 0;
   }
 
   .text-decor {
@@ -290,8 +287,6 @@
   .content__text-block-why {
     grid-template-columns: 315px 649px;
     grid-template-rows: repeat(2, 244px);
-    gap: 20px;
-    padding-top: 60px;
   }
 
   .content__title-flex {
@@ -305,7 +300,6 @@
 
   .content__text-block-how {
     grid-template-columns: 315px 649px;
-    gap: 20px;
     padding-top: 60px;
   }
 
@@ -317,7 +311,6 @@
   .content__image-grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 260px 315px 432px;
-    gap: 20px;
     padding-top: 10px;
   }
 
@@ -353,14 +346,10 @@
     grid-template-columns: 984px;
     grid-template-rows: 728px;
     margin-top: 39px;
-    padding-bottom: 20px;
-    padding-top: 20px;
   }
 
   .footer__title {
     line-height: 129.53px;
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    padding-left: 40px;
   }
 }
 
@@ -374,26 +363,6 @@
     padding-bottom: 185px;
   }
 
-  .header__decor-rec::before {
-    right: 49px;
-    top: 20px;
-  }
-
-  .header__decor-rec::after {
-    right: 30px;
-    top: 28px;
-  }
-
-  .decorated-zone::after {
-    right: 20px;
-    top: 20px;
-  }
-
-  .decorated-zone::before {
-    left: 20px;
-    bottom: 20px;
-  }
-
   .header__theme-menu {
     padding: 190px 0 0 678px;
   }
@@ -404,32 +373,25 @@
   }
 
   .header__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    padding-top: 147px;
+    padding-top: 151px;
+    line-height: 154px;
   }
 
   .header__subtitle {
     padding-top: 130px;
-    padding-right: 20px;
   }
 
   .content__title {
     margin: 0;
   }
 
-  .content__subtitle-bold {
-    margin: 0 0 10px 0;
-  }
-
   .text-decor {
-    width: 364px;
+    max-width: 364px;
   }
 
   .content__text-block-why {
     grid-template-columns: 236px 472px;
     grid-template-rows: repeat(2, 314px);
-    gap: 20px;
-    padding-top: 60px;
   }
 
   .content__title-flex {
@@ -443,7 +405,6 @@
 
   .content__text-block-how {
     grid-template-columns: 236px 472px;
-    gap: 20px;
     padding-top: 80px;
   }
 
@@ -455,7 +416,6 @@
   .content__image-grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 194px 230px 318px;
-    gap: 20px;
   }
 
   .content__image-sunset {
@@ -486,14 +446,10 @@
     grid-template-columns: 728px;
     grid-template-rows: 984px;
     margin-top: 58px;
-    padding-bottom: 20px;
-    padding-top: 20px;
   }
 
   .footer__title {
-    line-height: 129.53px;
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    padding-left: 40px;
+    line-height: 99px;
   }
 }
 
@@ -560,7 +516,7 @@
   }
 
   .text-decor {
-    width: 355px;
+    max-width: 355px;
   }
 
   .content__text-block-why {
@@ -582,7 +538,7 @@
   .content__text-block-how {
     grid-template-columns: repeat(1, 355px);
     gap: 10px;
-    padding: 62px 0 0 0;
+    padding: 60px 0 0 0;
   }
 
   .content__text-block-images {

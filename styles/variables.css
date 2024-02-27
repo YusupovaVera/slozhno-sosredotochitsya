@@ -1,8 +1,10 @@
 :root {
   --main-text-color: #f1b2ce;
   --background-image: url(../images/cover-image-dark.png);
-  --main-font: "IBM Plex mono", "Arial", sans-serif;
+
+  --main-font: "IBM Plex mono", "Courier New", monospace;
   --accent-color: #ff0070;
+
   --main-background-color: #000028;
   --text-title-color: #db00ff;
   --text-subtitle-color: #ff0070;
@@ -13,8 +15,11 @@
   --border-color: #ff0070;
   --border-color-button-focus: rgba(53, 52, 48, 1);
   --border-color-button-hover: rgba(50, 49, 45, 0.4);
+  --button-color-hover: #353430;
+  --button-color-focus: #353430;
   --border-color-link-focus: rgba(241, 178, 206, 1);
   --border-color-link-hover: rgba(241, 178, 206, 1);
   --border-color-decorated-zone-after: #ff0070;
   --border-color-decorated-zone-before: #ff0070;
+  --visibility-rec: visible;
 }
