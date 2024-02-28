@@ -70,6 +70,8 @@
 .header__theme-menu-list {
   list-style-type: none;
   gap: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .header__theme-menu-button {
@@ -98,8 +100,8 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid var(--border-color-button-hover, rgba(50, 49, 45, 0.4));
-  color: var(--button-color-hover, #353430);
+  border: 1px solid var(--border-color-button-hover, rgba(255, 0, 112, 0.4));
+  color: var(--button-color-hover, #ff0070);
 }
 
 .header__theme-menu-button:focus {
@@ -108,9 +110,10 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--border-color-button-focus, rgba(53, 52, 48, 1));
+  border-bottom: 1px solid
+    var(--border-color-button-focus, rgba(255, 0, 112, 1));
   outline-offset: 1px;
-  color: var(--button-color-focus, #353430);
+  color: var(--button-color-focus, #ff0070);
 }
 
 .title__text-shadow {
@@ -173,6 +176,10 @@
   gap: 20px;
 }
 
+.content__text-block-images {
+  margin: 0 20px 0 20px;
+}
+
 .content__image-grid {
   display: grid;
   gap: 20px;
@@ -182,6 +189,31 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+}
+
+.content__image-sunset {
+  grid-column: span 2;
+}
+
+.content__image-ice-cream {
+  grid-row: span 2;
+  grid-column: span 1;
+}
+
+.content__image-tape {
+  grid-row: span 2;
+  grid-column: span 1;
+}
+
+.content__image-books {
+  grid-row: span 1;
+  grid-column: span 1;
+}
+
+.content__image-street {
+  grid-column: span 2;
+  grid-row: span 1;
 }
 
 .content__link {
@@ -254,6 +286,7 @@
 }
 
 /* Стили для разрешения экрана 1024*768 */
+
 @media (min-width: 1024px) {
   .page {
     max-width: 1024px;
@@ -268,7 +301,7 @@
   }
 
   .header__theme-menu-list {
-    display: flex;
+    flex-direction: row;
   }
 
   .header__title {
@@ -304,48 +337,19 @@
   }
 
   .content__text-block-images {
-    margin: 0 20px 0 20px;
     padding: 60px 0 20px 0px;
   }
 
   .content__image-grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 260px 315px 432px;
-    padding-top: 10px;
-  }
-
-  .content__images {
-    object-position: center;
-  }
-
-  .content__image-sunset {
-    grid-column: span 2;
-  }
-
-  .content__image-ice-cream {
-    grid-row: span 2;
-    grid-column: span 1;
-  }
-
-  .content__image-tape {
-    grid-row: span 2;
-    grid-column: span 1;
-  }
-
-  .content__image-books {
-    grid-row: span 1;
-    grid-column: span 1;
-  }
-
-  .content__image-street {
-    grid-column: span 2;
-    grid-row: span 1;
+    padding-top: 8px;
   }
 
   .footer {
     grid-template-columns: 984px;
     grid-template-rows: 728px;
-    margin-top: 39px;
+    margin-top: 40px;
   }
 
   .footer__title {
@@ -365,11 +369,6 @@
 
   .header__theme-menu {
     padding: 190px 0 0 678px;
-  }
-
-  .header__theme-menu-list {
-    display: inline-flex;
-    flex-direction: column;
   }
 
   .header__title {
@@ -409,43 +408,19 @@
   }
 
   .content__text-block-images {
-    margin: 0 20px 0 20px;
     padding: 60px 0 10px 0;
   }
 
   .content__image-grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 194px 230px 318px;
-  }
-
-  .content__image-sunset {
-    grid-column: span 2;
-  }
-
-  .content__image-ice-cream {
-    grid-row: span 2;
-    grid-column: span 1;
-  }
-
-  .content__image-tape {
-    grid-row: span 2;
-    grid-column: span 1;
-  }
-
-  .content__image-books {
-    grid-row: span 1;
-    grid-column: span 1;
-  }
-
-  .content__image-street {
-    grid-column: span 2;
-    grid-row: span 1;
+    padding-top: 8px;
   }
 
   .footer {
     grid-template-columns: 728px;
     grid-template-rows: 984px;
-    margin-top: 58px;
+    margin-top: 50px;
   }
 
   .footer__title {
@@ -482,15 +457,11 @@
     left: 10px;
     bottom: 10px;
   }
+
   .header__theme-menu {
     place-self: flex-end;
     padding-top: 73px;
     padding-right: 10px;
-  }
-
-  .header__theme-menu-list {
-    display: inline-flex;
-    flex-direction: column;
   }
 
   .header__title {
@@ -543,7 +514,7 @@
 
   .content__text-block-images {
     margin: 0 10px 0 10px;
-    padding: 21px 0 20px 0px;
+    padding: 15px 0 20px 0px;
   }
 
   .content__image-grid {
@@ -569,11 +540,6 @@
     grid-column: span 1;
   }
 
-  .content__image-books {
-    grid-row: span 1;
-    grid-column: span 1;
-  }
-
   .content__image-street {
     grid-column: span 1;
     grid-row: span 1;
@@ -582,7 +548,7 @@
   .footer {
     grid-template-columns: 355px;
     grid-template-rows: 647px;
-    margin-top: 12px;
+    margin-top: 19px;
     padding-bottom: 10px;
     padding-top: 10px;
   }
